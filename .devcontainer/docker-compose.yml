@@ -1,0 +1,12 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+    tty: true
+    stdin_open: true
+    volumes:
+      - ../app/:/usr/src/app 
+    working_dir: /usr/src/app
+    ports:
+      - "3010:3000"
